@@ -1,0 +1,6 @@
+2020-10-24 21:10:12 - ERROR - TemplateNotFound in /Users/craigderington/Projects/service-central/app/http/controllers/CarController.py on line 22
+2020-10-24 21:17:05 - ERROR - ResponseError in /Users/craigderington/Projects/service-central/bootstrap/start.py on line 38
+2020-10-24 21:54:00 - ERROR - UndefinedError in /Users/craigderington/Projects/service-central/resources/templates/cars.html on line 50
+2020-10-24 21:54:37 - ERROR - UndefinedError in /Users/craigderington/Projects/service-central/resources/templates/cars.html on line 50
+2020-10-24 21:57:19 - ERROR - UndefinedError in /Users/craigderington/Projects/service-central/resources/templates/cars.html on line 50
+2020-10-25 01:23:12 - ERROR - UndefinedError in /Users/craigderington/Projects/service-central/resources/templates/_layout.html on line 28
