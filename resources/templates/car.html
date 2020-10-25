@@ -1,8 +1,5 @@
-{% if exists('auth/base') %}
-    {% extends 'auth/base.html' %}
-{% else %}
-    {% extends 'base.html' %}
-{% endif %}
+{% extends "_layout.html" %}
+
 
 {% block css %}
 <!-- Application CSS -->
@@ -16,11 +13,11 @@
 {% block content %}
     <div class="container text-center">
         <div class="title m-b-md">
-            Car X Details
+           {{ car.year }} {{ car.make }} {{ car.model }}
         </div>
 
         <div class="links">
-            ... details ...
+            Owner: {{ car.user.name}}
         </div>
         
         

@@ -10,4 +10,7 @@ package-lock.json
 !.env.testing
 *.db
 craft.*
+craft
+*.log
 .code-workspace
+storage/

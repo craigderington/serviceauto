@@ -1,29 +1,27 @@
-{% if exists('auth/base') %}
-    {% extends 'auth/base.html' %}
+{% if exists("auth/base") %}
+    {% extends "auth/base.html" %}
 {% else %}
-    {% extends 'base.html' %}
+    {% extends "base.html" %}
 {% endif %}
 
 {% block css %}
-<!-- Application CSS -->
-<link href="/static/style.css" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block title %} 
-    Welcome To {{ config('application.name', 'Masonite') }} 
+    Welcome To {{ config("application.name", "Masonite") }} 
 {% endblock %}
 
 {% block content %}
-    <div class="container text-center">
-        <div class="title m-b-md">
-            <i class="fa fa-car"></i> {{ config("application.name") }} <br />Vehicle List
-            <span class="float-right">
-                <a href="#" class="btn btn-md btn-default"><i class="fa fa-search"></i> Search Customers</a>
-                <a href="#" class="btn btn-md btn-primary"><i class="fa fa-plus"></i> Add Car</a>
+    
+        <h5><i class="fa fa-car"></i> {{ config("application.name") }} Vehicle List
+            <span class="float-right" style="margin-bottom:15px;">
+                <a href="#" class="btn btn-sm btn-dark"><i class="fa fa-search"></i> Search Customers</a>
+                <a href="#" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add Car</a>
             </span>
-        </div>
-
-        {% if cars %}
+        </h5>
+   
+    {% if cars %}
+    
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -61,15 +59,16 @@
                 </tr>
             </tfoot>
         </table>
-        {% else %}
-            <div class="links">
-                There are {{ cars.count() }} cars in the database to display in the list.  <a href="#" class="btn btn-md btn-primary">Add Car</a>
-            </div>
-        {% endif %}
+    
+    {% else %}
+        
+        <div class="alert alert-primary" role="alert">
+            There are {{ cars.count() }} cars in the database to display in the list.  <a href="#" class="alert-link">Add Car</a>
+        </div>
+        
+    {% endif %}
         
         
-        
-    </div>
 {% endblock %}
 
 
